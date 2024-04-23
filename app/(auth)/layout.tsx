@@ -7,8 +7,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "E-commerce - Store Auth",
-  description: "Next.js 14 Ecommerce store front",
+  title: "Borcelle - Store Auth",
+  description: "Next.js 14 Borcelle Ecommerce store",
 };
 
 export default function RootLayout({
