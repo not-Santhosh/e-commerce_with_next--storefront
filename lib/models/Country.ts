@@ -1,0 +1,65 @@
+import mongoose from "mongoose";
+
+const CscSchema = new mongoose.Schema({
+    _id: String,
+    id: Number,
+    name: String,
+    iso3: String,
+    iso2: String,
+    numeric_code: String,
+    phone_code: String,
+    capital: String,
+    currency: String,
+    currency_name: String,
+    currency_symbol: String,
+    tld: String,
+    native: String,
+    region: String,
+    region_id: String,
+    subregion: String,
+    subregion_id: String,
+    nationality: String,
+    timezones: [{
+        zoneName: String,
+        gmtOffset: Number,
+        gmtOffsetName: String,
+        abbreviation: String,
+        tzName: String,
+    }],
+    translations: {
+        kr: String,
+        "pt-BR": String,
+        pt: String,
+        nl: String,
+        hr: String,
+        fa: String,
+        de: String,
+        es: String,
+        fr: String,
+        ja: String,
+        it: String,
+        cn: String,
+        tr: String,
+    },
+    latitude: String,
+    longitude: String,
+    emoji: String,
+    emojiU: String,
+    states: [{
+        id: Number,
+        name: String,
+        state_code: String,
+        latitude: String,
+        longitude: String,
+        cities: [{
+            id: Number,
+            name: String,
+            latitude: String,
+            longitude: String,
+        }],
+    }],
+});
+
+const CSC = mongoose.models.csc || mongoose.model('csc', CscSchema);
+
+export default CSC;

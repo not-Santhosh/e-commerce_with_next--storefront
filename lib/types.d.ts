@@ -15,15 +15,23 @@ type ProductType = {
     tags: [string];
     price: number;
     cost: number;
-    sizes: [string];
-    colors: [string];
+    size: [string];
+    color: [string];
     createdAt: string;
     updatedAt: string;
 };
 
+type cart = {
+    item: ProductType,
+    quantity: number,
+    color?: string,
+    size?: string,
+};
+
 type UserType = {
     clerkId: string;
-    wishlist: [string];
+    wishlist: string[];
+    cartItems: cart[];
     createdAt: string;
     updatedAt: string;
 };
